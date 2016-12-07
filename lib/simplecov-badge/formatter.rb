@@ -152,7 +152,8 @@ class SimpleCov::Formatter::BadgeFormatter
   end
   
   def output_path
-    SimpleCov.coverage_path
+    # TODO: Should be defined via config
+    "#{SimpleCov.coverage_path}/.."
   end
 
   def title_background(cov, strength, foreground, use)
